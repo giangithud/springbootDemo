@@ -19,7 +19,7 @@ import java.time.Duration;
  * @date 2019/8/29 13:48
  */
 @Configuration
-// 开启缓存
+// 开启redis缓存
 @EnableCaching
 public class CacheConfig {
 

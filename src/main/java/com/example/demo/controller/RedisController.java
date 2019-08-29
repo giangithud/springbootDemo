@@ -1,4 +1,4 @@
-package com.example.demo.redis;
+package com.example.demo.controller;
 
 import com.example.demo.dao.UserRepository;
 import com.example.demo.entity.User;

@@ -73,6 +73,12 @@
             <artifactId>commons-pool2</artifactId>
         </dependency>
         <!--redis 相关jar-->
+
+        <!--spring-session 需要引入redis-->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

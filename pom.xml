@@ -54,7 +54,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-
         <!--lombok 配置 常用的有@Data  来生成getter setter ；@Slf4j 来自动注入log对象记录logger日志（
         用于代替 private Logger logger = LoggerFactory.getLogger(aaa.class); ）-->
         <dependency>
@@ -63,6 +62,17 @@
             <version>${org.projectlombok.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <!--redis 相关jar-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <!--redis 相关jar-->
     </dependencies>
 
     <build>

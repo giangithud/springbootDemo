@@ -17,17 +17,20 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 public class HelloWorldController {
-    // private static final Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
     @Autowired
     Constant constant;
+
     @Autowired
     PropertiesTest propertiesTest;
 
 
     @RequestMapping("/hello")
-    public String index(){
+    public String index() {
         log.info("index");
         log.error("index");
-        return "Hello World devtools "+constant.getVal()+"propertiesTest="+propertiesTest.getNameTest();
+        return "Hello World devtools " + constant.getVal() + "propertiesTest=" + propertiesTest.getNameTest();
     }
+
+
+
 }

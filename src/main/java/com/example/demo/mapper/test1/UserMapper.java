@@ -1,7 +1,8 @@
-package com.example.demo.mapper;
+package com.example.demo.mapper.test1;
 
 import com.example.demo.entity.User;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @date 2019/8/29 23:11
  */
 //@Mapper
+@Repository("userMapper1")
 public interface UserMapper {
 
     @Select("SELECT * FROM user")

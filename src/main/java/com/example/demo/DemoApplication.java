@@ -1,20 +1,17 @@
 package com.example.demo;
 
-import com.example.demo.properties.PropertiesTest;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.net.URL;
 import java.util.Enumeration;
 
 //org.springframework.boot.autoconfigure.domain.EntityScan;
+// @MapperScan配置mapper扫描路径；如果不配置扫描，可以在类上面加上@Mapper注解
 
 @SpringBootApplication
-/*
-@EnableJpaRepositories("com.example.demo.*")
-@ComponentScan(basePackages = { "com.example.demo.*" })
-@EntityScan("com.example.demo.*")*/
+@MapperScan("com.example.demo.mapper")
 public class DemoApplication {
 
     public static void main(String[] args) {

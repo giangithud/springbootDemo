@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
  * @author guoxiong@igetwell.cn
  * @version V1.0
  * @fileName HelloWorldController
- * @description 注释
+ * @description 引入jar，然后application.properties 配置相关配置，然后即可注入模板使用
  * @date 2019/8/26 23:54
  */
 // 自动注入 log

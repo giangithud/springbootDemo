@@ -2,6 +2,10 @@ package com.example.demo.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 /**
@@ -50,9 +54,32 @@ public class Lambda {
 
         System.out.println(doSome("bear", e -> e + " stupid"));
         System.out.println(doSome("beer", e -> e + " clver"));
+        System.out.println(function("beer", x -> x + "what"));
     }
 
     public static String doSome(String str,MyFunction myfun){
         return myfun.function(str);
     }
+
+    /**返回Boolean类型，stream的filter里面就是用这个*/
+    public static Boolean predicate(String str,Predicate<String> predicate){
+        return predicate.test(str);
+    }
+
+    /**有返回值*/
+    public static String function(String str,Function<String,String> myfun){
+        return myfun.apply(str);
+    }
+
+    /**消费，无返回值*/
+    public static void consumer(String str,Consumer<String> consumer){
+        consumer.accept(str);
+    }
+
+    /**供给型接口 */
+    public static String supplier(Supplier<String> supplier){
+        return supplier.get();
+    }
+
+
 }
